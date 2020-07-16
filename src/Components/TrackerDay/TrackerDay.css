@@ -6,19 +6,19 @@
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     margin: 1vh 0.5vw;
-    color: #425f72
+    text-decoration: none;    
 }
 
 .trackerDay.complete {
-    background-color: #425f72;
-    border-color: #63ebe2;
-    color: #63ebe2;
+    background-color: var(--accent-midnight-blue);
+    border-color: var(--main-aqua);
+    color: var(--main-aqua);
 }
 
 .trackerDay.incomplete {
-    background-color: #425f72;
-    border-color: #e88fdb;
-    color: #e88fdb; 
+    background-color: var(--accent-midnight-blue);
+    border-color: var(--main-pink);
+    color: var(--main-pink); 
 }
 
 .trackerDay.notLogged{

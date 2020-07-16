@@ -1,0 +1,47 @@
+.logger {
+    background-color: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+}
+
+.logger__title {
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "Codystar";
+}
+
+.logger__form label * {
+    font-size: 1.3em;
+}
+
+.logger__form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-light-background);
+    border-radius: 5px;
+    width: 90vw;
+    padding: 0 2vw;
+}
+
+.logger__form__button {
+    align-self: center;
+    margin: 1vh auto;
+    padding: 1vh 0;
+    width: 40vw;
+    border: 4px solid var(--main-pink);
+    background-color: #fcfcfcc2;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--main-pink);
+    font-size: 1.2em;
+}
+
+.logger__form__button:hover {
+    background-color: var(--main-pink);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.logger__form .MuiCheckbox-colorPrimary.Mui-checked {
+    color: #20b4bf;
+}

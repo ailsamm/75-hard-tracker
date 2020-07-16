@@ -2,7 +2,8 @@ import React from 'react';
 
 const AppContext = React.createContext({
   users: [],
-  userLogs: []
+  userLogs: [],
+  onAddNewLog: () => {}
 });
 
 export default AppContext;

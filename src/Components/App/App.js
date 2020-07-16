@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-import Tracker from '../Tracker/Tracker';
+import Main from '../Main/Main';
 import AppContext from '../../AppContext';
 import STORE from '../../STORE';
 import './App.css';
@@ -23,17 +23,25 @@ export default class App extends Component {
         })
     }
 
+    addNewLog = (log) => {
+        let logs = [...this.state.userLogs, log]
+        this.setState({
+            userLogs: logs
+        });
+    }
+
     render() {
         const contextValue = {
             users: this.state.users,
             userLogs: this.state.userLogs,
-            loggedInUser: this.state.loggedInUser
+            loggedInUser: this.state.loggedInUser,
+            onAddNewLog: this.addNewLog,
         }
         return (
             <AppContext.Provider value={contextValue}>
                 <div className="app">
                 <Header/>
-                <Tracker/>
+                <Main/>
                 </div>
             </AppContext.Provider>
         );

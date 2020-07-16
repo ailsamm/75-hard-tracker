@@ -3,11 +3,16 @@
 :root {
     --main-background-color: #364a57;
     --main-text-color: #3e3e3e;
+    --main-light-background: #e1e1e1d4;
+    --main-aqua: #63ebe2;
+    --main-pink: #e88fdb;
+    --accent-midnight-blue: #425f72;
 }
 
 .app {
     background-color: var(--main-background-color);
-    height: 100%;
+    background-repeat: repeat-y;
+    background-size: 200vh;
     width: 100vw;
     margin-top: 0;
     padding-bottom: 15vh;

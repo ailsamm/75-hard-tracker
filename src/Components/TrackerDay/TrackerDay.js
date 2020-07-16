@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './TrackerDay.css';
+import { NavLink } from 'react-router-dom';
 
 export default class TrackerDay extends Component {
 
@@ -23,11 +24,11 @@ export default class TrackerDay extends Component {
     render() {
         let className = this.getClassName();
         return (
-            <div value={this.props.num} className={`trackerDay ${className}`}>
+            <NavLink to={`/logger/${this.props.num}`} className={`trackerDay ${className}`}>
                 <p className="trackerDay__number">
                     {this.props.num}
                 </p>
-            </div>
+            </NavLink>
         )
     }
 }

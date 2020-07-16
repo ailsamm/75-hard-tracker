@@ -23,7 +23,7 @@
 .tracker__rules {
     margin: 5vh 0;
     padding: 0 2vw;
-    background-color: #e1e1e1d4;
+    background-color: var(--main-light-background);
 }
 
 .tracker__rules__rule {

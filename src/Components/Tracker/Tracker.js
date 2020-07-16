@@ -21,8 +21,7 @@ export default class Tracker extends Component {
         let userLogs = this.context.userLogs.filter(log => log.user_id === this.context.loggedInUser);
         for (let i = 0; i < 75; i++) {
             let dayLog = userLogs.find(log => log.day_number === i + 1);
-            let backgroundColor = !!dayLog ? "red" : "#FFF";
-            days.push(<TrackerDay num={i+1} log={dayLog || null}/>);
+            days.push(<TrackerDay key={i+1} num={i+1} log={dayLog || null}/>);
         }
         return (
             <div className="tracker">
