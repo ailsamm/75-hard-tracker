@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lato:wght@700&family=Roboto:wght@500&display=swap');
 .trackerDay {
     width: 10vh;
     height: 10vh;
     background-color: #f2f2f26b;
+    font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     margin: 1vh 0.5vw;
 }
