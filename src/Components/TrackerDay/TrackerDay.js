@@ -3,12 +3,11 @@ import './TrackerDay.css';
 
 export default class TrackerDay extends Component {
 
-    getStyling(){
+    getClassName(){
         let className;
         let log = this.props.log;
         // if day successfully completed
         if (!!log && log.complete) {
-            
             className = "complete"
         }
         // if day incomplete
@@ -19,13 +18,12 @@ export default class TrackerDay extends Component {
         else {
             className = "notLogged";
         }
-
         return className;
     }
     render() {
-        let className = this.getStyling();
+        let className = this.getClassName();
         return (
-            <div className={`trackerDay ${className}`}>
+            <div value={this.props.num} className={`trackerDay ${className}`}>
                 <p className="trackerDay__number">
                     {this.props.num}
                 </p>
