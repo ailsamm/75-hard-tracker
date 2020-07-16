@@ -26,7 +26,8 @@ export default class App extends Component {
     render() {
         const contextValue = {
             users: this.state.users,
-            userLogs: this.state.userLogs
+            userLogs: this.state.userLogs,
+            loggedInUser: this.state.loggedInUser
         }
         return (
             <AppContext.Provider value={contextValue}>

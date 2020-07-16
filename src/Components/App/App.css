@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&family=Nunito&display=swap');
+
 :root {
-    --main-background-color: #4b4b4b;
+    --main-background-color: #364a57;
+    --main-text-color: #3e3e3e;
 }
 
 .app {
     background-color: var(--main-background-color);
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     margin-top: 0;
+    padding-bottom: 15vh;
+    font-family: "Nunito";
 }

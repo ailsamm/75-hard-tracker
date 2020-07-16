@@ -2,10 +2,34 @@
 .trackerDay {
     width: 10vh;
     height: 10vh;
-    background-color: #f2f2f26b;
+    border: 4px solid #00000000;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     margin: 1vh 0.5vw;
+    color: #425f72
+}
+
+.trackerDay.complete {
+    background-color: #425f72;
+    border-color: #63ebe2;
+    color: #63ebe2;
+}
+
+.trackerDay.incomplete {
+    background-color: #425f72;
+    border-color: #e88fdb;
+    color: #e88fdb; 
+}
+
+.trackerDay.notLogged{
+    background-color: #f2f2f231;
+    border-color: #00000000;
+    color: #9a9a9a;
+}
+
+.trackerDay:hover{
+    background-color: #5f87a2;
+    cursor: pointer; 
 }
 
 .trackerDay__number {

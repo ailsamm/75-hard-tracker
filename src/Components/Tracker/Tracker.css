@@ -1,9 +1,42 @@
-.tracker {
-    background-color: #a5a5a5;
+@import '../App/App.css';
+
+.tracker__days, .tracker__rules {
     height: auto;
     width: 90vw;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+.tracker {
+    flex-direction: column;
+    align-items: center;
+}
+
+.tracker, .tracker__days, .tracker__rules__ruleset {
     display: flex;
+}
+
+.tracker__days {
     flex-wrap: wrap;
+}
+
+.tracker__rules {
+    margin: 5vh 0;
+    background-color: #e1e1e1d4;
+    flex-wrap: wrap;
+}
+
+.tracker__rules__rule {
+    width: 50vw;
+    font-size: 1.2em;
+    color: var(--main-text-color);
+}
+
+.tracker 
+
+.tracker__rules__title {
+    font-family: "Codystar";
+    letter-spacing: 0.25em;
+    text-align: center;
+    font-size: 2em;
 }
