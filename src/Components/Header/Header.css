@@ -7,7 +7,26 @@
     text-align: center;
     font-family: "Codystar", "Arial";
     letter-spacing: 0.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: -webkit-linear-gradient(#FFF, #b1ebe7, #63ebe2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.header__links {
+    display: flex;
+    justify-content: center;
+}
+
+.header__link {
+    font-size: 1.5em;
+    margin: 0 4vw 3vh 4vw;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.header__link.active {
+    border-bottom: 2px dotted #FFF;
 }

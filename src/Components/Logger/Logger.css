@@ -23,23 +23,46 @@
     padding: 0 2vw;
 }
 
+.logger__form__buttons {
+    display: flex;
+    margin: 2vh 0;
+}
+
 .logger__form__button {
+    font-family: "Nunito";
     align-self: center;
     margin: 1vh auto;
     padding: 1vh 0;
     width: 40vw;
-    border: 4px solid var(--main-pink);
     background-color: #fcfcfcc2;
     border-radius: 5px;
     font-weight: bold;
-    color: var(--main-pink);
     font-size: 1.2em;
 }
 
+.logger__form__button.submitButton {
+    color: var(--main-pink);
+    border: 4px solid var(--main-pink);
+}
+
+.logger__form__button.backButton {
+    text-align: center;
+    text-decoration: none;
+    color: #20b4bf;
+    border: 4px solid  #20b4bf;
+}
+
 .logger__form__button:hover {
-    background-color: var(--main-pink);
     color: #FFF;
     cursor: pointer;
+}
+
+.logger__form__button.backButton:hover {
+    background-color: #20b4bf;
+}
+
+.logger__form__button.submitButton:hover {
+    background-color: var(--main-pink);
 }
 
 .logger__form .MuiCheckbox-colorPrimary.Mui-checked {

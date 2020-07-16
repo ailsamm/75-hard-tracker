@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Checkbox, FormControlLabel } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 import AppContext from '../../AppContext';
 import './Logger.css';
 
@@ -130,7 +131,10 @@ export default class Logger extends Component {
                         }
                         label="No cheat meals or alcohol"
                     />
-                    <button type="submit" className="logger__form__button">LOG</button>
+                    <div className="logger__form__buttons">
+                        <NavLink to="/tracker" className="logger__form__button backButton">BACK</NavLink>
+                        <button type="submit" className="logger__form__button submitButton">LOG</button>
+                    </div>
                 </form>
             </div>
         )
