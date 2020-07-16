@@ -1,0 +1,10 @@
+:root {
+    --main-background-color: #4b4b4b;
+}
+
+.app {
+    background-color: var(--main-background-color);
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+}
