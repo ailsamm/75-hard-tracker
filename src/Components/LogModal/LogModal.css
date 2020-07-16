@@ -1,0 +1,14 @@
+.completeRule {
+    color: #35c794;
+}
+
+.incompleteRule {
+    color: #bbbbbb;
+}
+
+.modal__title {
+    font-family: "Codystar";
+    text-align: center;
+    font-size: 2em;
+    margin: 1vh 0;
+}

@@ -21,14 +21,31 @@ export default class TrackerDay extends Component {
         }
         return className;
     }
-    render() {
-        let className = this.getClassName();
+
+    getNavLink() {
         return (
-            <NavLink to={`/logger/${this.props.num}`} className={`trackerDay ${className}`}>
+            <NavLink to={`/logger/${this.props.num}`} className={`trackerDay notLogged`}>
                 <p className="trackerDay__number">
                     {this.props.num}
                 </p>
             </NavLink>
+        )
+    }
+
+    getDiv(className){
+        return (
+            <div onClick={e => this.props.handleClick(this.props.num)} value={this.props.log.day_number} className={`trackerDay  ${className}`}>
+                <p className="trackerDay__number">
+                    {this.props.num}
+                </p>
+            </div>
+        )
+    }
+
+    render() {
+        let className = this.getClassName();
+        return (
+            className === "complete" || className === "incomplete" ? this.getDiv(className) : this.getNavLink()
         )
     }
 }

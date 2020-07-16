@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TrackerDay from '../TrackerDay/TrackerDay';
 import AppContext from '../../AppContext';
+import LogModal from '../LogModal/LogModal';
 import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTint, faDumbbell, faLeaf, faBook, faWineGlassAlt } from '@fortawesome/free-solid-svg-icons';
 import './Tracker.css';
@@ -12,16 +13,42 @@ export default class Tracker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userLogs: []
+            userLogs: [],
+            isModalOpen: false,
+            selectedLog: {
+                user_id: 100, 
+                day_number: 1, 
+                logged: true, 
+                complete: true, 
+                workout1: true, 
+                workout2: true, 
+                water: true, 
+                no_cheating: true, 
+                diet: true, 
+                read: true, 
+                notes: ""
+            },
         }
     }
+
+    handleClick = dayNumber => {
+        let log = this.context.userLogs.find(log => log.day_number === dayNumber && log.user_id === this.context.loggedInUser);
+        this.setState({
+            selectedLog: log,
+            isModalOpen: true
+        })
+    }
+
+    handleCloseModal = () => {
+        this.setState({ isModalOpen: false });
+    };
 
     render() {
         let days = [];
         let userLogs = this.context.userLogs.filter(log => log.user_id === this.context.loggedInUser);
         for (let i = 0; i < 75; i++) {
             let dayLog = userLogs.find(log => log.day_number === i + 1);
-            days.push(<TrackerDay key={i+1} num={i+1} log={dayLog || null}/>);
+            days.push(<TrackerDay handleClick={this.handleClick} key={i+1} num={i+1} log={dayLog || null}/>);
         }
         return (
             <div className="tracker">
@@ -38,6 +65,7 @@ export default class Tracker extends Component {
                         <p className="tracker__rules__rule"><FontAwesomeIcon icon={faWineGlassAlt}/> No alcohol</p>
                     </div>
                 </div>
+                <LogModal open={this.state.isModalOpen} log={this.state.selectedLog} handleClose={this.handleCloseModal}/>
             </div>
         )
     }
