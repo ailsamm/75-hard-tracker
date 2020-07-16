@@ -1,0 +1,9 @@
+.tracker {
+    background-color: #a5a5a5;
+    height: auto;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
