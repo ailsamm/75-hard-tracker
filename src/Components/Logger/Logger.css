@@ -41,8 +41,8 @@
 }
 
 .logger__form__button.submitButton {
-    color: var(--main-pink);
-    border: 4px solid var(--main-pink);
+    color: var(--accent-dark-pink);
+    border: 4px solid var(--accent-dark-pink);
 }
 
 .logger__form__button.backButton {
@@ -62,9 +62,49 @@
 }
 
 .logger__form__button.submitButton:hover {
-    background-color: var(--main-pink);
+    background-color: var(--accent-dark-pink);
 }
 
 .logger__form .MuiCheckbox-colorPrimary.Mui-checked {
     color: #20b4bf;
+}
+
+.logger__form__checkboxes {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.logger__form__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MuiFormControl-root.MuiTextField-root {
+    width: 100%;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl {
+    height: 70vh;
+}
+
+.logger__form__input .MuiFormLabel-root.Mui-focused, .logger__form__input div > .MuiOutlinedInput-notchedOutline {
+    color: var(--accent-dark-pink);
+    border-color: var(--accent-dark-pink);
+}
+
+@media only screen and (min-width: 700px) {
+    .logger__form__input {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl {
+        height: 100%;
+    }
+
+    .MuiFormControl-root.MuiTextField-root {
+        width: 50%;
+    }
 }

@@ -12,3 +12,13 @@
     font-size: 2em;
     margin: 1vh 0;
 }
+
+.notes__notes {
+    margin-top: 5vh;
+    color: #425f72;
+}
+
+.notes__title {
+    letter-spacing: 0.25em;
+    font-weight: bold;
+}

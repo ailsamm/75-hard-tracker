@@ -16,7 +16,15 @@ function getModalStyle() {
   };
 }
 
-function organiseRules(log) {
+function getNotes(notes) {
+    return (
+        <div className="notes__container">
+            <p className="notes__notes"><span className="notes__title">NOTES:</span> {notes}</p>
+        </div>
+    )
+}
+
+function getContent(log) {
     let complete = [];
     let incomplete = [];
 
@@ -46,6 +54,7 @@ function organiseRules(log) {
         <div>
             {complete}
             {incomplete}
+            {!!log.notes.length && getNotes(log.notes)}
         </div>
     )
 }
@@ -61,38 +70,6 @@ export default function LogModal(props) {
           padding: theme.spacing(2, 4, 3),
           borderRadius: "10px",
           outline: 0
-        },
-        title: {
-            color: "red",
-            fontWeight: "500",
-            display: "flex",
-            justifyContent: "space-between"
-        },
-        container: {
-            color: "red",
-            fontSize: "1.75em",
-            display: 'flex',
-            backgroundColor: "#f0f0f0",
-            alignItems: "center",
-            padding: "1vh 0",
-            borderRadius: "10px",
-            margin: "1vh 0"
-        },
-        activities: {
-            justifyContent: 'space-around',
-        },
-        sleep: {
-            justifyContent: 'center',
-        },
-        sleepHours: {
-            fontSize: "0.8em"
-        },
-        trash: {
-            color: "#e17c7c9c",
-            border: "none",
-            backgroundColor: "inherit",
-            fontSize: "1em",
-            cursor: "pointer"
         }
     }));
 
@@ -102,7 +79,7 @@ export default function LogModal(props) {
     const body = (
         <div style={modalStyle} className={classes.main}>
             <h2 className="modal__title">DAY {props.log.day_number}</h2>
-            {organiseRules(props.log)}
+            {getContent(props.log)}
         </div>
     );
 

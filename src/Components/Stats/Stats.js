@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Doughnut, Line, Bar } from 'react-chartjs-2';
-import { NavLink } from 'react-router-dom';
+import { Bar } from 'react-chartjs-2';
 import AppContext from '../../AppContext';
 import './Stats.css';
 
