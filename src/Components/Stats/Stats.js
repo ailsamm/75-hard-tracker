@@ -26,8 +26,8 @@ export default class Stats extends Component {
             labels: ['successes', 'failures'],
             datasets: [
                 {
-                label: 'Count',
-                backgroundColor: 'rgba(75,192,192,1)',
+                label: null,
+                backgroundColor: ['#63ebe2', '#e88fdb'],
                 borderWidth: 2,
                 data: [successCount, failureCount]
                 }
@@ -67,7 +67,7 @@ export default class Stats extends Component {
                             maintainAspectRatio: true,
                             title:{
                                 display:true,
-                                text:'Success vs. Failure',
+                                text:'Current progress',
                                 fontSize:20
                             },
                             legend:{
