@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Checkbox, FormControlLabel, TextField } from '@material-ui/core';
+import { Checkbox, FormControlLabel, TextField, Slider } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import AppContext from '../../AppContext';
 import './Logger.css';
@@ -17,6 +17,7 @@ export default class Logger extends Component {
             read: false,
             diet: false,
             noCheating: false,
+            difficulty: 5,
             notes: ""
         }
     }
@@ -27,6 +28,10 @@ export default class Logger extends Component {
         })
     }
 
+    handleUpdateDifficulty = (e, difficulty) => {
+        this.setState({ difficulty })
+    }
+
     handleChange = val => {
         this.setState({
             [`${val}`]: !this.state[val],
@@ -35,7 +40,7 @@ export default class Logger extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        let { workout1, workout2, water, read, diet, noCheating, notes } = this.state;
+        let { workout1, workout2, water, read, diet, noCheating, notes, difficulty } = this.state;
         let userId = this.context.loggedInUser;
         let day = parseInt(this.props.match.params.id);
         const complete = workout1 && workout2 && water && read && diet && noCheating;
@@ -50,6 +55,7 @@ export default class Logger extends Component {
             read, 
             diet, 
             no_cheating: noCheating, 
+            difficulty,
             notes
         }
 
@@ -137,6 +143,18 @@ export default class Logger extends Component {
                                 />
                                 }
                                 label="No cheat meals or alcohol"
+                            />
+                            <p>Daily Difficulty:</p>
+                            <Slider
+                                defaultValue={5}
+                                getAriaValueText={this.value}
+                                onChange={this.handleUpdateDifficulty}
+                                aria-labelledby="daily difficulty"
+                                step={1}
+                                marks
+                                min={0}
+                                max={10}
+                                valueLabelDisplay="auto"
                             />
                         </div>
                         <TextField 

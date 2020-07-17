@@ -75,10 +75,18 @@
     align-items: stretch;
 }
 
-.logger__form__input {
+.logger .logger__form__input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.logger .MuiFormControlLabel-label {
+    font-family: "Nunito";
+}
+
+.logger__form__input .MuiSlider-root {
+    color: var(--accent-dark-pink);
 }
 
 .MuiFormControl-root.MuiTextField-root {
