@@ -1,0 +1,35 @@
+.stats__quickFeatures {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stats__quickFeature {
+    background-color: var(--main-light-background);
+    width: 20vw;
+    border-radius: 5px;
+}
+
+.stats__charts {
+    display: flex;
+    justify-content: center;
+    margin: 5vh auto;
+}
+
+.stats__charts canvas {
+    max-width: 50vw;
+}
+
+.featureTitle {
+    font-family: "Codystar";
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+}
+
+.featureContent {
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+}

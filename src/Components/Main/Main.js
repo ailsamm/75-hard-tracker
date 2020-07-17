@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import Tracker from '../Tracker/Tracker';
 import Logger from '../Logger/Logger';
+import Stats from '../Stats/Stats';
 import './Main.css';
 
 export default class Main extends Component {
@@ -26,6 +27,12 @@ export default class Main extends Component {
                         key='logger'
                         path='/logger/:id' 
                         component={Logger}
+                    />
+                    <Route 
+                        exact
+                        key='stats'
+                        path='/stats' 
+                        component={Stats}
                     />
                     </AnimatedSwitch>
                 </Switch>
