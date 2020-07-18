@@ -62,30 +62,37 @@ export default class Stats extends Component {
                         className="stats__charts__barChart"
                         data={this.getBarData()}
                         options={{
+                            chartArea: {
+                                backgroundColor: '#FFF'
+                            },
                             responsive: true,
                             maintainAspectRatio: true,
                             title:{
                                 display:true,
                                 text:'Current progress',
-                                fontSize:20
+                                fontSize:20,
+                                fontColor: "#FFF"
                             },
                             legend:{
-                                display:true,
-                                position:'right'
+                                display:false,
                             },
                             scales: {
                                 xAxes: [{
+                                    ticks: {
+                                        fontColor: "#FFF"
+                                    },
                                     gridLines: {
                                         display: false
                                     }
                                 }],
                                 yAxes: [{
                                     ticks: {
-                                        beginAtZero: true
-                                    },
-                                    userCallback: function(label) {
-                                        if (Math.floor(label) === label) return label;
-                                    },
+                                        beginAtZero: true,
+                                        fontColor: "#FFF",
+                                        userCallback: function(label) {
+                                            if (Math.floor(label) === label) return label;
+                                        }
+                                    }
                                 }]
                             }
                         }}
